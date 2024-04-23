@@ -2,7 +2,7 @@ import React from 'react'
 
 function Navbar() {
   return (
-    <nav className="w-full bg-red-200 flex items-center justify-start px-10 py-8 font-thin text-xs text-[#424244] tracking-wide gap-8 bg-">
+    <nav className="w-[80%] bg-red-200 flex items-center justify-center px-10 py-8 font-thin text-xs text-[#424244] tracking-wide gap-8 bg-">
 
         <div className="w-[10%] bg-slate-600 flex flex-col">
             <ul >
