@@ -3,4 +3,39 @@
   padding:0;
   box-sizing: border-box;
   font-family: "Noto Sans", sans-serif;
+  /* color: #424244; */
+}
+p{
+  font-size:11px;
+}
+
+/* .nav-links ul {
+  padding: 2px;
+  list-style-type: none;
+  list-style: none ;
+} */
+
+.nav-links li {
+  /* display: flex; */
+  flex-direction: col;
+  margin-top: 6px;
+  font-size:11px;
+}
+.nav-links li:hover{
+  /* margin-top: 6px; */
+  cursor: pointer;
+  border-bottom: 1px solid black;
+} 
+
+ .footer-links li {
+  flex-direction: col;
+  /* margin-top: 6px; */
+  font-size:11px;
+}
+
+.footer-para {
+  margin-top: 0.6rem;
+}
+.footer-conatct-link  a:hover{
+      border-bottom: 1px solid black;
 }

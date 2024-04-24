@@ -1,35 +1,60 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
-  return (
-    <nav className="w-[80%] bg-red-200 flex items-center justify-center px-10 py-8 font-thin text-xs text-[#424244] tracking-wide gap-8 bg-">
 
-        <div className="w-[10%] bg-slate-600 flex flex-col">
-            <ul >
-                <li>Shop All</li>
-                <li>New</li>  
-                <li>Back in Stock</li>
-            </ul>
-            </div>
-        <div className='w-[70%] flex gap-6'>
-            <ul>
-              <li>Bedroom</li>
-              <li>Bathroom</li>
-              <li>Living</li>
-            </ul>
-            <ul>
-              <li>Kitchen & Table</li>
-              <li>Housekeeping</li>
-              <li>Outdoors</li>
-            </ul>
-            <ul>
-              <li>Office & Paper</li>
-              <li>Apparel</li>
-              <li>Baby & Child</li>
-            </ul>
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Optional: Add smooth scrolling behavior
+    });
+  };
+
+  return (
+    <nav className="w-full bg-white sticky top-0 z-10 flex  items-center  px-10 py-4  text-xs   bg-">
+      <div className=" inline text-3xl font-bold">
+        <div className="flex">
+          <h1 className="border-y-2  border-black">e</h1> <h1>veryday</h1>
         </div>
+        <div className="flex">
+          <h1 className="border-b-2  border-black">n</h1> <h1>eeds</h1>
+        </div>
+      </div>
+
+      <div className="w-[90%] flex  justify-between  px-6 ">
+      <div className="inline-flex  gap-20">
+        <ul className="nav-links">
+        <Link to='/shopall' onClick={scrollToTop}> <li className="inline border-b-[1px] border-black">Shop All</li></Link>
+          <li>New</li>
+          <li>Back in Stock</li>
+        </ul>
+
+        <ul className="nav-links">
+          <Link to='/Bedroom' onClick={scrollToTop}><li>Bedroom</li></Link>
+          <Link to='/bathroom' onClick={scrollToTop}><li>Bathroom</li></Link>
+          <Link to='/living' onClick={scrollToTop}><li>Living</li></Link>
+        </ul>
+        <ul className="nav-links">
+        <Link to='/kitchentable' onClick={scrollToTop}> <li>Kitchen & Table</li></Link>
+        <Link to='/housekeeping' onClick={scrollToTop}> <li>Housekeeping</li></Link>
+        <Link to='/outdoors' onClick={scrollToTop}> <li>Outdoors</li></Link>
+        </ul>
+        <ul className="nav-links">
+        <Link to='/OfficePaper' onClick={scrollToTop}> <li>Office & Paper</li></Link>
+        <Link to='/Apparel' onClick={scrollToTop}> <li>Apparel</li></Link>
+        <Link to='/BabyChild' onClick={scrollToTop}> <li>Baby & Child</li></Link>
+        </ul>
+        </div>
+      <div className="flex  ">
+        <ul>
+          <li>Cart(0)</li>
+          <li>SignUp/SignIn</li>
+        </ul>
+      </div>
+      </div>
+
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
