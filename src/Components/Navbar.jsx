@@ -47,7 +47,7 @@ function Navbar() {
         </div>
       <div className="flex  ">
         <ul>
-          <li>Cart(0)</li>
+        <Link to='/cart' onClick={scrollToTop}> <li>cart(0)</li></Link>
           <li>SignUp/SignIn</li>
         </ul>
       </div>

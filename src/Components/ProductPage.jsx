@@ -4,9 +4,16 @@ import { useParams } from "react-router-dom";
 import { data } from "../fetchAPI";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { addItem } from "./CartSlice";
+import { useDispatch } from "react-redux";
 
 
 const ProductPage = () => {
+  const dispatch = useDispatch();
+
+  const addFoodItem = (product) => {
+    dispatch(addItem(product));
+  };
   
 
   // Extract the product handle from the URL parameter
@@ -39,7 +46,7 @@ const ProductPage = () => {
           <div>  
             <h4 className="text-xs">price</h4>
             <h4 className="mt-4">${product.price / 100}.00</h4>
-            <button className="mt-10 bg-zinc-600 text-white text-xs px-16 py-4 hover:text-black hover:bg-white border hover:border-black">Add to Cart</button>
+            <button    onClick={() => addFoodItem(product)} className="mt-10 bg-zinc-600 text-white text-xs px-16 py-4 hover:text-black hover:bg-white border hover:border-black">Add to Cart</button>
           </div>
           <div className="text-[11px] text-wrap mt-16">
             <h4 className="font-semibold">Description</h4>

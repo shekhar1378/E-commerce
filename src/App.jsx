@@ -18,6 +18,7 @@ import Outdoors from './Components/CategoryPages/Outdoors'
 import OfficePaper from './Components/CategoryPages/OfficePaper'
 import Apparel from './Components/CategoryPages/Apparel'
 import BabyChild from './Components/CategoryPages/BabyChild'
+import Cart from "./Components/Cart"
 
 function App() {
   const scrollToTop = () => {
@@ -43,6 +44,10 @@ const router =createBrowserRouter([
   {
     path:'/product/:handle',
     element:<ProductPage/>
+  },
+  {
+    path:'/cart',
+    element:<Cart/>
   },
   {
     path:'/shopall',
