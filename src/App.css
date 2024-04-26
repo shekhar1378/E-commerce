@@ -39,3 +39,36 @@ p{
 .footer-conatct-link  a:hover{
       border-bottom: 1px solid black;
 }
+
+/* Apply custom scrollbar to all scrollable elements */
+::-webkit-scrollbar {
+  width: 10px; /* Set width of the scrollbar */
+
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #195618; /* Set color of the scrollbar thumb */
+  border-radius: 12px; /* Set border radius for a rounded look */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Change thumb color on hover */
+  border-radius: 12px; /* Set border radius for a rounded look */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Set color of the scrollbar track */
+  margin-left: 1px;
+}
+
+
+@media (min-width: 768px)  {
+  .mobile-product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the width as needed */
+    gap: 20px;
+
+}
+}
+

@@ -10,7 +10,7 @@ import LeftSidebar from './Components/LeftSidebar'
 import Footer from './Components/Footer'
 import Bedroom from "./Components/CategoryPages/Bedroom";
 import ShopAll from "./Components/CategoryPages/ShopAll"
-import Bathroom from "./Components/CategoryPages/Bathroom"
+
 import Living from "./Components/CategoryPages/Living"
 import KitchenTable from './Components/CategoryPages/KitchenTable'
 import HouseKeeping from './Components/CategoryPages/HouseKeeping'
@@ -57,10 +57,7 @@ const router =createBrowserRouter([
     path:'/bedroom',
     element:<Bedroom/>
   },
-  {
-    path:'/bathroom',
-    element:<Bathroom/>
-  },
+ 
   {
     path:'/living',
     element:<Living/>

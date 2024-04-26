@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar({cartItems}) {
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -31,23 +31,22 @@ function Navbar() {
 
         <ul className="nav-links">
           <Link to='/Bedroom' onClick={scrollToTop}><li>Bedroom</li></Link>
-          <Link to='/bathroom' onClick={scrollToTop}><li>Bathroom</li></Link>
           <Link to='/living' onClick={scrollToTop}><li>Living</li></Link>
+        <Link to='/kitchentable' onClick={scrollToTop}> <li>Kitchen & Table</li></Link>
         </ul>
         <ul className="nav-links">
-        <Link to='/kitchentable' onClick={scrollToTop}> <li>Kitchen & Table</li></Link>
         <Link to='/housekeeping' onClick={scrollToTop}> <li>Housekeeping</li></Link>
         <Link to='/outdoors' onClick={scrollToTop}> <li>Outdoors</li></Link>
+        <Link to='/OfficePaper' onClick={scrollToTop}> <li>Office & Paper</li></Link>
         </ul>
         <ul className="nav-links">
-        <Link to='/OfficePaper' onClick={scrollToTop}> <li>Office & Paper</li></Link>
         <Link to='/Apparel' onClick={scrollToTop}> <li>Apparel</li></Link>
         <Link to='/BabyChild' onClick={scrollToTop}> <li>Baby & Child</li></Link>
         </ul>
         </div>
       <div className="flex  ">
         <ul>
-        <Link to='/cart' onClick={scrollToTop}> <li>cart(0)</li></Link>
+      <Link to='/cart' onClick={scrollToTop}> <li>cart({cartItems?.length})</li></Link>
           <li>SignUp/SignIn</li>
         </ul>
       </div>
